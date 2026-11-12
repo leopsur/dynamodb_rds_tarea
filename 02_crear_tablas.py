@@ -206,6 +206,20 @@ def funcionalidad_2_crear_tablas(db_host=None):
     else:
         print("[INFO] Las tablas ya contenían datos previamente.")
 
+    # --- BLOQUE AÑADIDO: VERIFICACIÓN DE TABLAS EN AWS RDS ---
+    print("\n" + "-"*80)
+    print(f"VERIFICANDO TABLAS CREADAS EN LA BASE DE DATOS '{os.getenv('DB_NAME')}' (AWS RDS):")
+    print("-"*80)
+    cursor.execute("SHOW TABLES;")
+    tablas = [fila[0] for fila in cursor.fetchall()]
+
+    for i, tabla in enumerate(tablas, start=1):
+        cursor.execute(f"SELECT COUNT(*) FROM `{tabla}`;")
+        total_filas = cursor.fetchone()[0]
+        print(f"  {i:02d}. {tabla:<25} -> {total_filas} registros guardados")
+    print("-"*80)
+    # ---------------------------------------------------------
+
     cursor.close()
     connection.close()
 
