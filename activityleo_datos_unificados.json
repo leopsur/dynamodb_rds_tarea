@@ -1,0 +1,114 @@
+{
+    "proyecto": "ActivityLeo - Plataforma Big Data Comunitaria",
+    "fecha_generacion": "2026-11-16 18:39:56",
+    "resumen_integracion": {
+        "total_registros_rds": 10,
+        "total_registros_dynamodb": 3
+    },
+    "catalogo_unificado": {
+        "propuestas_destacadas": {
+            "origen_rds_relacional": [
+                {
+                    "id_propuesta": 1,
+                    "titulo_propuesta": "Taller de Diseño e Impresión 3D",
+                    "nombre_categoria": "Tecnología y Robótica",
+                    "origen": "Encuesta Alumnos",
+                    "votos_registrados": 3
+                },
+                {
+                    "id_propuesta": 2,
+                    "titulo_propuesta": "Torneo Intercentros Gaming & Esports",
+                    "nombre_categoria": "Gaming y Esports",
+                    "origen": "Redes Sociales",
+                    "votos_registrados": 2
+                }
+            ],
+            "origen_dynamodb_nosql": [
+                {
+                    "categoria": "Tecnologia",
+                    "estado": "Aprobada",
+                    "id_propuesta": "PROP-01",
+                    "titulo": "Taller Impresión 3D",
+                    "total_votos": 50
+                }
+            ]
+        },
+        "espacios_y_planificacion": {
+            "calendario_confirmado_rds": [
+                {
+                    "id_actividad": 1,
+                    "titulo_propuesta": "Taller de Diseño e Impresión 3D",
+                    "nombre_espacio": "Aula de Informática 1",
+                    "capacidad_maxima": 25,
+                    "horario_fijo": "2026-11-20 17:00:00"
+                },
+                {
+                    "id_actividad": 2,
+                    "titulo_propuesta": "Torneo Intercentros Gaming & Esports",
+                    "nombre_espacio": "Salón de Actos",
+                    "capacidad_maxima": 120,
+                    "horario_fijo": "2026-11-21 18:00:00"
+                },
+                {
+                    "id_actividad": 3,
+                    "titulo_propuesta": "Liga de Baloncesto Urbano 3x3",
+                    "nombre_espacio": "Pista Polideportiva Exterior",
+                    "capacidad_maxima": 60,
+                    "horario_fijo": "2026-11-22 11:00:00"
+                }
+            ],
+            "disponibilidad_tiempo_real_dynamodb": [
+                {
+                    "capacidad": 30,
+                    "disponible": true,
+                    "id_espacio": "ESP-01",
+                    "nombre": "Aula Informática 1",
+                    "tipo": "Tecnologia"
+                }
+            ]
+        },
+        "segmentacion_intereses": {
+            "alumnos_rds": [
+                {
+                    "alumno": "Lucas Pérez",
+                    "curso": "3º ESO A",
+                    "nombre_categoria": "Tecnología y Robótica",
+                    "nivel_interes": 5
+                },
+                {
+                    "alumno": "María Gómez",
+                    "curso": "2º Bachillerato B",
+                    "nombre_categoria": "Gaming y Esports",
+                    "nivel_interes": 5
+                },
+                {
+                    "alumno": "Elena Sánchez",
+                    "curso": "2º ESO C",
+                    "nombre_categoria": "Tecnología y Robótica",
+                    "nivel_interes": 5
+                },
+                {
+                    "alumno": "Lucas Pérez",
+                    "curso": "3º ESO A",
+                    "nombre_categoria": "Gaming y Esports",
+                    "nivel_interes": 4
+                },
+                {
+                    "alumno": "Diego Morales",
+                    "curso": "4º ESO A",
+                    "nombre_categoria": "Deporte Urbano",
+                    "nivel_interes": 4
+                }
+            ],
+            "interacciones_dynamodb": [
+                {
+                    "id_usuario": "USR-01",
+                    "nivel_interes": 5,
+                    "perfil": "alumno",
+                    "zona": "Centro",
+                    "id_categoria": "CAT-3D"
+                }
+            ]
+        }
+    }
+}
